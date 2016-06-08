@@ -1,9 +1,10 @@
 {
-  "name": "",
+  "name": "express-starter",
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "build-docs": "apidoc -i api/ -o api/docs/"
   },
   "dependencies": {
     "body-parser": "~1.13.2",
@@ -15,6 +16,7 @@
     "serve-favicon": "~2.3.0"
   },
   "devDependencies": {
-    "nodemon": "^1.9.2"
+    "nodemon": "^1.9.2",
+    "apidoc": "^0.15.0"
   }
 }

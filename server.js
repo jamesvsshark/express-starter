@@ -29,6 +29,9 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 app.set('view cache', false);
 
+// make api docs the default page
+app.use('/', express.static(path.join(__dirname, 'api/docs')));
+
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.urlencoded({
     extended: false
@@ -66,7 +69,7 @@ function normalizePort(val) {
 
 
 // Start server
-server.listen(config.port, config.ip, function () {
+server.listen(config.port, config.ip, function() {
     console.log('Express server listening on %d, in %s mode', config.port, app.get('env'));
 });
 

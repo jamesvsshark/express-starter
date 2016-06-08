@@ -4,10 +4,10 @@
 
 'use strict';
 
-module.exports = function (app) {
+module.exports = function(app) {
 
     // Enable CORS
-    app.use(function (req, res, next) {
+    app.use(function(req, res, next) {
         res.header("Access-Control-Allow-Origin", "*");
         res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
         res.header("Access-Control-Allow-Methods", "POST, GET, PUT, OPTIONS");
@@ -18,16 +18,16 @@ module.exports = function (app) {
     app.use('/', require('./api/index'));
 
     // send view page on empty route
-    app.route('/')
-        .get(function (req, res) {
-            res.render('index', {
-                title: 'Express'
-            });
-        });
+    // app.route('/')
+    //     .get(function(req, res) {
+    //         res.render('index', {
+    //             title: 'Express'
+    //         });
+    //     });
 
     // All undefined asset or api routes should return a 404
     app.route('/*')
-        .get(function (req, res) {
-            return res.send(404);
+        .get(function(req, res) {
+            return res.sendStatus(404);
         });
 };
