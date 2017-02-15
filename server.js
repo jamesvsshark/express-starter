@@ -29,8 +29,8 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 app.set('view cache', false);
 
-// make api docs the default page
-app.use('/', express.static(path.join(__dirname, 'api/docs')));
+// api docs
+app.use('/api/docs', express.static(path.join(__dirname, 'api/docs')));
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.urlencoded({
