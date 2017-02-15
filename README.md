@@ -13,10 +13,10 @@ A simple node express server with apidocs -- great starting point for a new web 
 
 
 ## Credits
-http://pocostud.io/ (Now hiring)
-http://www.apidocjs.com/
-https://www.expressjs.com/
-Other great developers
+- http://pocostud.io/ (Now hiring)
+- http://www.apidocjs.com/
+- https://www.expressjs.com/
+- Other great developers
 
 
 ## Todo
